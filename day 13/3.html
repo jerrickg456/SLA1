@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 3</title>
+  <style>
+    .card {
+      width: 200px;
+      height: 100px;
+      background-color: skyblue;
+      text-align: center;
+      line-height: 100px;
+      margin: 50px auto;
+      transition: all 0.5s;
+    }
+
+    .card:hover {
+      background-color: orange;
+      transform: scale(1.2);
+      box-shadow: 5px 5px 15px gray;
+    }
+
+    .hidden {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .card:hover .hidden {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  Hover Me
+  <div class="hidden">Hello!</div>
+</div>
+
+</body>
+</html>
