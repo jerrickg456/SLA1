@@ -1,0 +1,3 @@
+TYPE ERROR:
+A TypeError occurs in JavaScript when an operation is performed on a value of an incorrect type.
+ For example, assigning a new value to a const variable causes a TypeError.
