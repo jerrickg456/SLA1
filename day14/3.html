@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { font-size: 16px; }
+
+.em-text { font-size: 2em; }
+.rem-text { font-size: 2rem; }
+
+.box {
+  min-height: 100px;
+  max-height: 200px;
+  background-color: lightgreen;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: lightyellow;
+  }
+}
+</style>
+</head>
+<body>
+
+<p class="em-text">This text uses 2em</p>
+<p class="rem-text">This text uses 2rem</p>
+
+<div class="box">Resize browser height</div>
+
+</body>
+</html>

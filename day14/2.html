@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.para1 { color: blue; }
+p#para1 { color: red; }
+#para1 p { color: green; }
+
+div span { color: purple; }
+div > span { color: orange; }
+
+p { color: black !important; }
+
+.box::before { content: "Before "; }
+.box::after { content: " After"; }
+
+a:link { color: blue; }
+a:visited { color: purple; }
+a:hover { color: red; }
+a:active { color: green; }
+</style>
+</head>
+<body>
+
+<p class="para1">Class Selector</p>
+<p id="para1">ID Selector</p>
+
+<div>
+  <span>Child Span</span>
+  <p><span>Nested Span</span></p>
+</div>
+
+<div class="box">Content</div>
+
+<a href="#">Link Example</a>
+
+</body>
+</html>
