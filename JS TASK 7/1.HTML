@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="title">Title</h2>
+<p id="para">This is a paragraph.</p>
+
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+function changeContent() {
+
+  document.getElementById("title").innerText = "Updated Title";
+
+  let paragraph = document.getElementById("para");
+
+  paragraph.innerHTML = "SLA!";
+
+  paragraph.style.color = "blue";
+  paragraph.style.fontSize = "20px";
+}
+</script>
+
+</body>
+</html>
