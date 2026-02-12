@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Task</title>
+</head>
+<body>
+
+<h3>Event Handling</h3>
+
+<input type="text" id="textInput" placeholder="Type here">
+<p id="display"></p>
+
+<button id="btn">Click Me</button>
+
+<form id="form">
+  <input type="text" placeholder="Enter Name">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+
+document.getElementById("textInput").addEventListener("input", function() {
+  document.getElementById("display").innerText = this.value;
+});
+
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button Clicked!");
+});
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("Form Submitted!");
+});
+</script>
+
+</body>
+</html>
