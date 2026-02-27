@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage Test</title>
+</head>
+<body>
+
+<h2 id="local"></h2>
+<h2 id="session"></h2>
+
+<script>
+    localStorage.setItem("username", "Jerrick");
+    var localValue = localStorage.getItem("username");
+    document.getElementById("local").innerText = "LocalStorage: " + localValue;
+
+    sessionStorage.setItem("email", "jerrick@example.com");
+    var sessionValue = sessionStorage.getItem("email");
+    document.getElementById("session").innerText = "SessionStorage: " + sessionValue;
+</script>
+
+</body>
+</html>
