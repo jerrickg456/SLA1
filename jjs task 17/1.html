@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        ul {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Employee Form</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+
+    <select id="designation">
+        <option>Developer</option>
+        <option>Designer</option>
+        <option>Tester</option>
+        <option>Manager</option>
+    </select>
+
+    <button id="submitBtn">Submit</button>
+
+    <ul id="employeeList"></ul>
+</div>
+
+<script>
+    var employees = [
+        { name: "Jerrick", age: 22, designation: "Developer" },
+        { name: "Arun", age: 25, designation: "Designer" },
+        { name: "Priya", age: 24, designation: "Tester" },
+        { name: "Kiran", age: 27, designation: "Manager" }
+    ];
+
+    for (var i = 0; i < employees.length; i++) {
+        console.log(
+            "Name: " + employees[i].name +
+            ", Age: " + employees[i].age +
+            ", Designation: " + employees[i].designation
+        );
+    }
+
+    document.getElementById("submitBtn").addEventListener("click", function () {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var designation = document.getElementById("designation").value;
+
+        var li = document.createElement("li");
+        li.textContent = "Name: " + name +
+                         ", Age: " + age +
+                         ", Designation: " + designation;
+
+        document.getElementById("employeeList").appendChild(li);
+
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+    });
+</script>
+
+</body>
+</html>
